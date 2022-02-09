@@ -1,0 +1,94 @@
+/* ------------------------------------- Structure BEGIN */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+/* ------------------------------------- Structure END */
+
+/* ------------------------------------- Fonts BEGIN */
+header > h1, header > h3 {
+	font-family: 'Teko', sans-serif;
+}
+header > h2 {
+	font-family: 'Source Serif 4', sans-serif;
+}
+
+/* ------------------------------------- Fonts END */
+
+/* ------------------------------------- Header BEGIN */
+header {
+    position: relative;
+	height: 50vh;
+    color: #FFF;
+    background-color: #000;
+    padding: 10px 0;
+    background-image: url(/img/Green_3.jpg);
+    background-size: 125vw;
+    background-position: 50% 50%;
+}
+
+header .site-title {
+    top: 50px;
+    padding: 0 20vw;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+}
+.site-title.tournament-year.hdr-col-2 {
+    font-size: 70px;
+    line-height: 1;
+    margin: 0;
+}
+.site-title.main-title.hdr-col-2 {
+    font-size: 50px;
+    line-height: 1;
+    margin: 0;
+}
+.site-title.sub-title.hdr-col-2 {
+    font-size: 40px;
+    margin: 15px 0 0 0;
+}
+.header-logo.hdr-col-1 {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    margin-right: 40px;
+}
+header .hdr-col-2 {
+    top: 50px;
+    padding: 0 20vw;
+    position: relative;
+}
+.header-logo.hdr-col-3 {
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    margin-left: 40px;
+}
+/* ------------------------------------- Header END */
+
+/* ------------------------------------- Navigation BEGIN */
+#nav-placeholder {
+    width: 100vw;
+    position: absolute;
+    top: 55vh;
+}
+#nav-placeholder .snazzymenu.dark {
+    background: rgb(10 110 8 / 85%);
+}
+/* ------------------------------------- Navigation END */
+
+/* ------------------------------------- Content BEGIN */
+.content {
+	max-width: 50vw;
+	margin: 0 auto;
+	padding: 20px 0;
+	color: #000;
+	background-color: #FFF;
+}
+/* ------------------------------------- Content BEGIN */
+
+.homepage .page-section 
+.homepage .page-section-1 .focusarea {
+
+}
