@@ -88,7 +88,19 @@ header .hdr-col-2 {
 }
 /* ------------------------------------- Content BEGIN */
 
-.homepage .page-section 
+.homepage .page-section {
+    position: relative;
+    width: 100%;
+}
 .homepage .page-section-1 .focusarea {
-
+    position: relative;
+    width: 59%;
+    left: 0;
+    padding: 0 20px;
+}
+.homepage .page-section-1 .sidebar {
+    position: relative;
+    width: 39%;
+    right: 0;
+    padding: 0;
 }
