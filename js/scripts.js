@@ -2,44 +2,39 @@
 	$(document).ready(function() {
         
         // Load SnazzyMenu on each page load
-        $("#nav-placeholder").load("http://new.cottonstates.org/nav.htm");
+        $("#nav-placeholder").load("http://www.cottonstates.org/nav.htm");
+
+        // Inject the footer on each page load
+        $("#footer-placeholder").load("http://www.cottonstates.org/footer.htm");
 
         // Init SnazzyMenu
+        // Code from: https://www.jqueryscript.net/demo/responsive-sticky-mega-nav-snazzy/
         setTimeout(function() {
             $('.snazzymenu').snazzyMenu({
                 colClasses: true,
                 breakpoint: 768,
                 position: 'right', // or 'top'
                 sticky: true,
-                homeBtn:'<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z"/></svg>',
+                homeBtn:'<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24" y="0"/></g><g><g><rect height="1.5" width="4" x="14" y="12"/><rect height="1.5" width="4" x="14" y="15"/><path d="M20,7h-5V4c0-1.1-0.9-2-2-2h-2C9.9,2,9,2.9,9,4v3H4C2.9,7,2,7.9,2,9v11c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V9 C22,7.9,21.1,7,20,7z M11,7V4h2v3v2h-2V7z M20,20H4V9h5c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2h5V20z"/><circle cx="9" cy="13.5" r="1.5"/><path d="M11.08,16.18C10.44,15.9,9.74,15.75,9,15.75s-1.44,0.15-2.08,0.43C6.36,16.42,6,16.96,6,17.57V18h6v-0.43 C12,16.96,11.64,16.42,11.08,16.18z"/></g></g></svg>&nbsp;Entry&nbsp;Form&nbsp;<span class="material-icons external-link">&#xE89E;</span>',
                 locationBtn:'http://maps.google.com/maps?hl=en&gs_nf=1&cp=8&gs_id=w&xhr=t&bav=on.2,or.r_gc.r_pw.r_qf.,cf.osb&biw=1600&bih=779&um=1&ie=UTF-8&q=bayou+desiard+country+club&fb=1&gl=us&hq=bayou+desiard+country+club&hnear=0x862e4876e598840b:0x98ced239c9b8b4c9,Monroe,+LA&sa=',
                 locationLabel:'3501 Forsythe Ave, Monroe, LA',
-                phoneBtn: '+13183235136',
-                phoneLabel: 'Call Now',
                 menuBtn: true,
                 toggleBtn: 'plus' // or 'caret'
             });
         }, 1000);
         
-        // SnazzyMenu column header images
-        //$('.column-1').prepend('<img src="1.jpg">');
-        //$('.column-2').prepend('<img src="2.jpg">');
+        $('.slider').sss({
+            slideShow : false, // Set to false to prevent SSS from automatically animating.
+            startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
+            transition : 400, // Length (in milliseconds) of the fade transition.
+            speed : 3500, // Slideshow speed in milliseconds.
+            showNav : true // Set to false to hide navigation arrows.
+        });
 
+        if ($('body').hasClass('history-page')) {
+            $( "#tab-block" ).tabs();
+        }
+        
 	// END DOCUMENT READY
 	});
-
-
-    // Set value of each hidden field as buttons are clicked or selections are made
-	function setFieldValue(whichQuestion, whichAnswer) {
-		var questionId = "#" + whichQuestion;
-		$(questionId).val(whichAnswer);
-	}
-	
-	function setPriceFieldValue() {
-		var selectedPrice = $("#purchasePriceSlider").slider("value");
-		var priceLabel = $("#purchasePriceValue span");
-		setFieldValue("purchasePriceField", selectedPrice);
-		priceLabel.text(selectedPrice);
-	}
-	
 })( jQuery );
